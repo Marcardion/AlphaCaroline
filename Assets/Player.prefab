@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 212394151268187496}
   - component: {fileID: 95149569240133654}
   m_Layer: 0
-  m_Name: Foxy_Body
+  m_Name: Caroline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256501286480042}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0.21, z: 0}
+  m_LocalPosition: {x: 0, y: 0.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4602602632880368}
@@ -373,7 +373,7 @@ MonoBehaviour:
   my_state: 0
   speed: 4
   sprint_speed: 0
-  player_direction: 0
+  player_direction: 3
   direction_change: 1
   modifier: 0
   accept_control: 1
@@ -478,7 +478,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: b834991dd77ad2042975c12081683496, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f25be6bf4ae3a1747855564cdb700506, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

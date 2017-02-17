@@ -31,6 +31,7 @@ public class Player_Movement : MonoBehaviour {
 
 	public Slider energy_bar;
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -41,12 +42,14 @@ public class Player_Movement : MonoBehaviour {
 		energy_bar = GameObject.Find ("Energy_Bar").GetComponent<Slider>();
 
 		sprint_speed = speed * 2f;
+
+		my_body_anim = GetComponentInChildren<Animator> ();
+
 	
 	}
 
 	// Update is called once per frame
 	void Update () {
-
 		if (accept_control == true)
 		{
 			moveHorizontal = Input.GetAxis ("Horizontal");
@@ -60,6 +63,7 @@ public class Player_Movement : MonoBehaviour {
 					if (being_moved == false)
 					{
 						my_rigidbody.velocity = new Vector3 (moveHorizontal * sprint_speed, my_rigidbody.velocity.y, moveVertical * sprint_speed);
+						my_body_anim.SetFloat ("MoveSpeed", 1.5f);
 					}
 					energy_bar.value = energy_bar.value - Time.deltaTime * 20f;
 					my_state = Player_State.Sprinting;
@@ -67,13 +71,17 @@ public class Player_Movement : MonoBehaviour {
 				{
 					if (being_moved == false)
 					{
-						my_rigidbody.velocity = new Vector3 (moveHorizontal * speed, my_rigidbody.velocity.y, moveVertical * speed);	
+						my_rigidbody.velocity = new Vector3 (moveHorizontal * speed, my_rigidbody.velocity.y, moveVertical * speed);
+						my_body_anim.SetFloat ("MoveSpeed", 1f);
 					}
 					my_state = Player_State.Walking;
+
 				}
+				my_body_anim.SetBool ("IsRunning", true);
 			} else
 			{
 				my_state = Player_State.Idle;
+				my_body_anim.SetBool ("IsRunning", false);
 			}
 		} else
 		{

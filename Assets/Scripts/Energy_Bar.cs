@@ -51,7 +51,6 @@ public class Energy_Bar : MonoBehaviour {
 	{
 		if (fade == true)
 		{
-			Debug.Log ("hello");
 			fill_image.color = new Color (fill_image.color.r, fill_image.color.g, fill_image.color.b, 0);
 		} else
 		{
