@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
+public enum Direction{Left, Right, Up, Down};
+
 public class Player_Movement : MonoBehaviour {
 
 	public enum Player_State {Idle, Walking, Sprinting, Firing, Uncontrollable};
@@ -11,7 +13,7 @@ public class Player_Movement : MonoBehaviour {
 	public float speed;
 	public float sprint_speed;
 
-	public enum Direction{Left, Right, Up, Down};
+
 
 	public Direction player_direction;
 
